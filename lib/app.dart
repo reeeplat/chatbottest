@@ -1,9 +1,8 @@
-// lib/app.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-import 'package:chatbot_test/presentation/viewmodel/chatbot_view.dart';
+import 'presentation/viewmodel/chatbot_view.dart';
 import 'presentation/screens/chatbot_screen.dart';
 
 class MyApp extends StatelessWidget {

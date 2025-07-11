@@ -1,35 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'app.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName: ".env"); // 반드시 dotenv 초기화
   runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ChatbotScreen(),
-    );
-  }
-}
-
-class ChatbotScreen extends StatelessWidget {
-  const ChatbotScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Meditooth 챗봇')),
-      body: const Center(
-        child: Text(
-          '여기에 챗봇 UI가 들어갑니다.',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
-  }
 }
 
